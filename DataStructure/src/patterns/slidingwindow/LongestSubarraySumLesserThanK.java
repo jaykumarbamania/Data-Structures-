@@ -30,7 +30,7 @@ class LongestSubarraySumLesserThanK {
         int left = 0;
         for(int right = 0; right< intArr.length; right++){
             sum += intArr[right];
-            if( sum > size) {
+            while (sum > size) {
                 sum -= intArr[left];
                 left++;
             }
