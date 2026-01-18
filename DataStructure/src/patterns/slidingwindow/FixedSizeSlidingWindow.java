@@ -3,15 +3,19 @@ package patterns.slidingwindow;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FixedSizeSlidingWindow {
+
+class FixedSizeSlidingWindow {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{10, 1, 5, 1, 3, 2};
+        int[] arr = new int[]{};
         int k = 3;
         System.out.println(maxArrSum(arr, k));
     }
 
     private static int maxArrSum(int[] nums, int k) {
+
+        if (nums == null || nums.length < k) return 0;
+
         int windowSum = 0;
         int maxSum = Integer.MIN_VALUE;
 
